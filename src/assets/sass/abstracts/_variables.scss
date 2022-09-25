@@ -2,12 +2,12 @@
 
 :root {
 	// Fonts
-	--heading-font: "Inter", sans-serif;
+	--heading-font: "Muli", sans-serif;
 	--body-font: "Muli", sans-serif;
 
 	//Colors
-	--heading: 240 75% 9%;
-	--body: 210 2% 56%;
+	--heading: 0 100% 100%;
+	--body: 210 2% 86%;
 	--border: 0 0% 90%;
 
 	// Base Color Shade
@@ -26,9 +26,9 @@
 	--base-900: var(--base-h) var(--base-s) calc(var(--base-l) - 20%);
 
 	// Accent Color Shade
-	--accent-h: 22;
-	--accent-s: 85%;
-	--accent-l: 52%;
+	--accent-h: 10;
+	--accent-s: 96%;
+	--accent-l: 67%;
 	--accent: var(--accent-h) var(--accent-s) var(--accent-l);
 	--accent-50: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 25%);
 	--accent-100: var(--accent-h) var(--accent-s) calc(var(--accent-l) + 20%);

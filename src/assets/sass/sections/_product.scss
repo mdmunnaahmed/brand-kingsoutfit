@@ -1,0 +1,36 @@
+.cart-product-item {
+	.thumb {
+		width: 90px;
+		padding-right: 10px;
+		img {
+			width: 100%;
+			border-radius: 3px;
+			padding-right: 0 !important;
+		}
+	}
+	input {
+		border-color: hsl(var(--border));
+		outline: none !important;
+		box-shadow: none !important;
+		&:focus {
+			border-color: hsl(var(--accent));
+		}
+	}
+}
+
+// Tranding Product
+.tranding-product {
+	&__thumb {
+		max-width: 150px;
+        img {
+            border-radius: 3px;
+        }
+	}
+    &__content {
+        padding: 10px 0;
+    }
+    .price-wrapper {
+        gap: 5px;
+    }
+}
+// Tranding Product

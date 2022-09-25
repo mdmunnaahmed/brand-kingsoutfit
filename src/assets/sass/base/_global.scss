@@ -9,6 +9,7 @@ body {
 	line-height: 1.7;
 	color: hsl(var(--body));
 	font-family: var(--body-font);
+	background-color: #152035;
 }
 a {
 	text-decoration: none;
@@ -56,6 +57,11 @@ ul {
 	&.active {
 		visibility: visible;
 		opacity: 1;
+	}
+	&.overlay-color {
+		visibility: visible;
+		opacity: 1;
+		background-color: hsl(var(--dark) / 0.3);
 	}
 }
 
@@ -146,22 +152,22 @@ h1 {
 	}
 }
 h2 {
-	font-size: 30px;
+	font-size: 35px;
 	@include breakpoint(max-md) {
-		font-size: 26px;
+		font-size: 30px;
 	}
 	@include breakpoint(max-sm) {
-		font-size: 22px;
+		font-size: 26px;
 	}
 }
 
 h3 {
-	font-size: 30px;
+	font-size: 26px;
 	@include breakpoint(max-xl) {
-		font-size: 26px;
+		font-size: 24px;
 	}
 	@include breakpoint(max-xs) {
-		font-size: 24px;
+		font-size: 22px;
 	}
 }
 h4 {

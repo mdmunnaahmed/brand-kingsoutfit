@@ -1,0 +1,10 @@
+.social-links {
+	@extend %flex;
+	gap: 10px 20px;
+	li {
+		svg {
+			width: 18px;
+			fill: hsl(var(--accent));
+		}
+	}
+}

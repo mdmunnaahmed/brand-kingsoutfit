@@ -2,18 +2,20 @@
 
 // Preloader
 $(window).on("load", function () {
-	$(".preloader").fadeOut(1000);
+	$(".preloader").fadeOut(100000000000000000);
 });
 
 // Menu Click Event
 let trigger = $(".header-trigger");
 let dropdown = $(".menu");
+let overlay = $(".overlay");
 if (trigger || dropdown) {
 	trigger.each(function () {
 		$(this).on("click", function (e) {
 			e.stopPropagation();
-			dropdown.slideToggle();
+			dropdown.toggleClass("active");
 			trigger.toggleClass("active");
+			overlay.toggleClass("overlay-color");
 		});
 	});
 	dropdown.each(function () {
@@ -23,8 +25,9 @@ if (trigger || dropdown) {
 	});
 	$(document).on("click", function () {
 		if (parseInt(screenSize) < parseInt(991)) {
-			dropdown.slideUp();
+			dropdown.removeClass("active");
 			trigger.removeClass("active");
+			overlay.removeClass("overlay-color");
 		}
 	});
 }
@@ -38,6 +41,7 @@ $(".menu .menu-item .menu-link").on("click", function (e) {
 
 //Menu Dropdown
 $("ul>li>.sub-menu").parent("li").addClass("has-submenu");
+$("ul>li>.mega-menu").parent("li").addClass("has-megamenu");
 
 // Detect Screen Size
 let screenSize = window.innerWidth;
@@ -74,6 +78,21 @@ $(".scrollToTop").on("click", function () {
 	return false;
 });
 
+// Banner Slider
+$(".banner-slider").slick({
+	fade: false,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	infinite: true,
+	autoplay: true,
+	autoplaySpeed: 5000,
+	speed: 1500,
+	pauseOnHover: true,
+	dots: false,
+	arrows: false,
+	nextArrow: '<i class="las la-arrow-right arrow-right"></i>',
+	prevArrow: '<i class="las la-arrow-left arrow-left"></i> ',
+});
 // Slider Part
 $(".brand-slider").slick({
 	fade: false,
